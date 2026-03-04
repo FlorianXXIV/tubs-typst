@@ -1,7 +1,9 @@
 // tubs-typst is a template (theme) that wraps `polylux` typst package. Please
 // look at `polylux` documentation to learn more: https://polylux.dev/book/
 
-#import "lib.typ": *
+// One way to install `tubs-typst` is to use it as a submodule.
+// #import "tubs-typst/beamer/lib.typ": * (adjust according to the location)
+#import "./lib.typ": *
 
 // Setup the template
 #show: setup.with(title: "Example Slides", subtitle: lorem(5), author: "Max Mustermann")
