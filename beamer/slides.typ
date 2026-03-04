@@ -1,17 +1,10 @@
+// tubs-typst is a template (theme) that wraps `polylux` typst package. Please
+// look at `polylux` documentation to learn more: https://polylux.dev/book/
+
 #import "lib.typ": *
 
+// Setup the template
 #show: setup.with(title: "Example Slides", subtitle: lorem(5), author: "Max Mustermann")
-
-// #slide[
-//   #set align(horizon)
-//   = My fabulous talk
-
-//   Jane Doe
-
-//   Conference on Advances in Slide Making
-// ]
-
-#toc
 
 #section("Erster Teil")
 
@@ -22,7 +15,15 @@
 #section("Zweiter Teil")
 
 #frame([Test 2])[
-  #lorem(12)
+  #only("1")[
+    - Animations can be done using `only` and `uncover`
+  ]
+  #only("2-")[
+    - The page number does not increase during animation steps
+  ]
+  #uncover("3")[
+    #sym.arrow.r.double #lorem(6)
+  ]
 ]
 
 #frame([Backup slide], active: false)[
