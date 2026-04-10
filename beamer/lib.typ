@@ -104,7 +104,7 @@
         = #title
         #subtitle
 
-        #text(size: 0.8em)[#author, #date.today().display(date_format)]
+        #text(size: 0.8em)[#author, #date.display(date_format)]
       ]
     ]
     #align(center + bottom)[
